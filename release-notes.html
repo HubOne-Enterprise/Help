@@ -1,0 +1,569 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>Introduction &gt; Release Notes</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Look and Feel,Swagger and Flow,Version 6.0,Version 6.1" />
+   <meta name="description" content="Version 6.8 Release Notes Welcome to the Release Notes for OnePractice 6.8. This release was authorised on 11 September 2020. This document contains information on the release,..." />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+        padding:0; 
+        background: #ffffff; 
+        font-family: 'Calibri Light'
+      } 
+      div#printheader { display: none; }
+      #idheader { 
+        width:100%; 
+        height:auto; 
+        padding: 0; 
+        margin: 0;
+        position: fixed;
+        top: 0;
+        z-index: 2;
+      } 
+      /* The "min-height" for "#idheader table" ensures that the (blue) header of the topic
+         has at least the same height as the header of the navigation panel left of it */
+      #idheader table { background: #33a3dc; min-height: 59px }             
+      #idheader h1 span { color: #FFF }     
+      #idnav {
+        text-align: right;
+        width: 126px;
+        vertical-align: middle;        
+      } 
+      #idnav a { text-decoration: none }
+      #idnav span {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        margin-left: 15px;
+        background:url('hm_webhelp_buttons_l.blue.png') top left no-repeat;
+      } 
+      #idnav a span {
+        background-image:url('hm_webhelp_buttons_op.white.png');
+      } 
+      #idnav a span:hover {
+        background-image:url('hm_webhelp_buttons_op.orange.png');
+      } 
+      #idnav span.hmbtnprev { background-position: 0 -32px }
+      #idnav span.hmbtnnext { background-position: -24px -32px }
+      #idnav span.hmbtntop  { background-position: -48px -32px }
+      #idnav span.hmbtntoggle  { width: 20px; background-position: -70px -32px }
+      #idnav span.hmbtnprint  { background-position: -88px -32px }
+
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }      
+      #switchtoggles { text-align: right; padding: 0 2px 0 0; font-size: 90%; } 
+      .sync-toc { color: #FFF; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #FFF; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #FFF; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: -4em; padding-top: 4em }	  
+   </style>
+   <style TYPE="text/css" media="print">
+      div#idheader, img.dropdown-toggle-icon, p.help-url { display:none } 
+   </style>
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "release-notes.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+
+
+<div id="printheader"><h1 class="p_Heading1" style="page-break-inside: avoid;"><span class="f_Heading1">Release Notes</span></h1>
+</div>
+<div id="idheader">
+<div id="idheaderbg">
+<table style="width:100%;border:none;margin:0px;" cellspacing="0" cellpadding="0"> 
+  <tr>
+    <td class="topichead" style="text-align:left; vertical-align:bottom">
+      <p class="sync-toc">&lt;&lt; <a rel="nofollow" href="index.html?release-notes.html" target="_top">Click to Display Table of Contents</a> &gt;&gt;</p>
+      <p class="crumbs"><b>Navigation:</b>&nbsp;
+      
+      <a href="introduction.html">Introduction</a>&nbsp;&gt;</p>
+   
+      <h1 class="p_Heading1" style="page-break-inside: avoid;"><span class="f_Heading1">Release Notes</span></h1>
+
+    </td>
+    <td class="topichead" id="idnav">
+      
+      <a href="welcome-topic.html" title="Previous Topic"><span class="hmbtnprev"></span></a>
+      <a href="introduction.html" title="Parent Chapter"><span class="hmbtntop"></span></a>
+      <a href="onepractice-provisioning.html" title="Next Topic"><span class="hmbtnnext"></span></a>
+      
+    </td>
+  </tr>  
+</table>
+</div>
+</div>  
+
+<div id="idcontent"><div id="innerdiv">
+<!-- Ask Internet Explorer 6.users to update their obsolete and dangerous browser --> 
+<!--[if lt IE 7]><div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;'><a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div><![endif]-->
+
+<!--ZOOMRESTART-->
+<h2 class="p_Heading2" style="page-break-inside: avoid;"><span class="f_Heading2">Version 6.8 Release Notes</span></h2>
+<p class="p_Normal" style="page-break-inside: avoid;">Welcome to the Release Notes for OnePractice 6.8. This release was authorised on 11 September 2020. This</p>
+<p class="p_Normal" style="page-break-inside: avoid;">document contains information on the release, and also details fixes included in this release.</p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">New Items in this Release</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span style="font-weight: bold;">Introduction of OnePractice Sync, retiring the legacy Microsoft Flow Integration and legacy Xero Practice Manager Integration.</span></p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span style="font-weight: bold;">Minor Changes in the main software to cope with new custom fields and more</span></p><p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span class="f_Heading2">Version 6.5 Release Notes</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;">Welcome to the Release Notes for OnePractice 6.5. This release was authorised on 15 June 2018. This</p>
+<p class="p_Normal" style="page-break-inside: avoid;">document contains information on the release, and also details fixes included in this release.</p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;">In this document:</p>
+<p class="p_Normal" style="page-break-inside: avoid;">1. New items in this release</p>
+<p class="p_Normal" style="page-break-inside: avoid;">2. Breaking changes</p>
+<p class="p_Normal" style="page-break-inside: avoid;">3. Items resolved in this release</p>
+<p class="p_Normal" style="page-break-inside: avoid;">4. Known issues in this release</p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">New Items in this Release</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#7679 Ability to Search on any part of the client list</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;">This feature adds to Mail, Templates and Mail Templates and means when you are manually searching for a</p>
+<p class="p_Normal" style="page-break-inside: avoid;">client, you can type any part of the client name and the application will filter based on any part of the client</p>
+<p class="p_Normal" style="page-break-inside: avoid;">name.</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6841 Single Sign-On for CCH</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;">Instructions have been produced showing how to configure and establish single sign on for CCH iFirm in</p>
+<p class="p_Normal" style="page-break-inside: avoid;">OnePractice.</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#7674 Add Custom Field Popups when user clicks send in Mail Templates</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;">Previously, mail templates would add only data from practice management to emails. Now when you click</p>
+<p class="p_Normal" style="page-break-inside: avoid;">send, you can add custom data. This has been delivered in this release.</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#7678 Terms and Conditions</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;">Terms and Conditions were amended to support GDPR and change location of HubOne Support Website.</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6809 Templates Re-Design</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;">Templates has a new, modern look and feel.</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6737 Add Documentation on Archive Library</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;">Documentation has been added to aid in choices on initial document migration.</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#7645 Add Documentation on MetaData</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;">Documentation has been added on how to Create MetData Columns, Edit or Set Defaults and Edit Options.</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#7572 Templates: Ability to add Client Folder</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;">Templates now has the ability to add a new folder if one does not exist.</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#7659 Scans: Add feature to increase manual documents from 6</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;">This setting has been added under Pdf Processing Mode</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">7703 Website: Amend Partner Terms and Conditions</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;">Partner Terms and Conditions have been updated</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#7651 Document Exclude Columns in App Settings Table</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;">Documentation Added</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#7666 Scans: Add Ability to discard and Delete Saved Items</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;">Feature Added.</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#7652 Metadata: Allow default values for all column types</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;">Default metadata configured in the Document Center library settings will appear across all OnePractice apps.</p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">Breaking Changes</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;">There are no breaking changes in this release. Customers and partners are reminded to check the relevant</p>
+<p class="p_Normal" style="page-break-inside: avoid;">terms and conditions for changes.</p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">Items resolved in this release</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;">Please note a significant number of the items below were discovered and resolved during internal testing, on</p>
+<p class="p_Normal" style="page-break-inside: avoid;">interim builds prior to this release. However they are all documented here for completeness.</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#7561 Mail: MFA does not work with 1P</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;">Multifactor Authentication Resolved</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#7563 Mail Templates: MFA does not work with 1P</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;">Multifactor Authentication Resolved</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#7662 Document Center: Request Sign Off Feature</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#7665 Scan Doctor: Change url where the download is located</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#7671 Mail templates: Add custom dialog func to the Send process too</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#7675 Change Licensing Message</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#7689 Mail: Change email address on error notification from sales@ to support@</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#7692 Templates: add very thin light grey line around the border</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#7693 Templates: remove big white space or extend available templates box</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#7694 Templates: 2nd tier folders can't be opened</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#7695 Templates: recent documents - if nothing then display message</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#7696 Templates: Order of buttons</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#7697 Templates: Extend metadata box</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#7698 Templates: Doesn't finish refreshing when you click menu item</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#7700 Templates: edit user prompt text</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#7701 Templates: Button back to Available templates page</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#7709 Templates: Client name disappears when you select subfolders</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#7711 Templates: Date icon doesn't appear</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#7715 Templates: Hover over the cloud icon</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#7729 Updated </span><span style="font-weight: bold;">OnePractice</span><span style="font-weight: bold;"> Templates doco - missing info</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#7730 Updated </span><span style="font-weight: bold;">OnePractice</span><span style="font-weight: bold;"> Templates - can we lose page 3 - grey page with the word</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">Templates only?</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#7731 Updated Templates Doco - missing info Section 1 Templates paragraph 3</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6861 CCH Template Manager - Postal Address fields</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#7639 Mail: Add ping feature to maintain session</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#7681 Mail Templates: ##Year~~Text## doesn't work in subject</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#7688 Scans: Updated doco</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#7691 Mail Templates: add feature for pulling recent documents without sharepoint search</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#7699 Provisioning: MFA blocking Step 4</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#7702 Templates: Font size</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#7706 Templates: subfolder creation takes me back to the root</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#7707 Templates: File did not download</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#7708 Templates: I created subfolders but they didn't save</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#7710 Templates: Creating documents after you've used a subfolder on a previous client</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">continues to save them there</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#7712 Templates: Can't see full calendar</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#7713 Templates: Cutting of border when custom data is added</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#7716 Scans: Check for illegal @ in clients data from XPM</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#7717 Mail Templates: Turn off multi client emails</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#7718 Templates: update button name</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#7719 Templates: update sentence</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#7722 Mail Templates: O365 user fields do not work in MT</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#7723 Templates: </span><span style="font-weight: bold;">OnePractice</span><span style="font-weight: bold;"> loading logo</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#7724 Templates: CCH loading logo</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#7727 Mail Templates IE - preview of draft email does not load</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#7728 Templates: verify templates screen doesn't fit on screen well</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#7732 Templates Doco - remove word always</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#7738 Templates: loading logo</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">Known Issues</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6656 Template Manager stuck refreshing lists</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;">We have had a single report of this issue on a single machine and are attempting a repro WORKAROUND:</p>
+<p class="p_Normal" style="page-break-inside: avoid;">Attempt action again</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6784 OP mobile help font</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;">WORKAROUND: None</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6785 CCH mobile help font</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;">WORKAROUND: None</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#7648 Update apps names in Sales battlecard in Partner portal</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;">WORKAROUND: None</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#7660 Mail Templates - does not save and no meta data</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;">WORKAROUND: Attempt to save email again</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#7721 Mail Templates: Dropdown error in OWA</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;">WORKAROUND: Amend your template until error is resolved.</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#7725 Mail Templates - Preview not loading in EDGE</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;">WORKAROUND: Use Chrome</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#7726 Mail Templates Preview Window loads but is empty - related Bug - 7725</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;">WORKAROUND: Use Chrome</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#7647 Provisioning: Set home page for top link in SP Portal</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;">WORKAROUND: Manual Change Links in SharePoint if Required</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#7740 Provision App: Remove Country Selector</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;">WORKAROUND: Only use AU even for a NZ XPM Client</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#7741 Provision App: Error Creating Metadata columns with defaults</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;">WORKAROUND: Follow guidance to manual create defaults</p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-inside: avoid;"><span class="f_Heading2">Version 6.3 Release Notes</span></h2>
+<p class="p_Normal" style="page-break-inside: avoid;">Welcome to the Release Notes for OnePractice 6.3. This release was authorised on 23 March 2018. This document contains information on the release, and also details fixes included in this release.</p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;">In this document:</p>
+<p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>New items in this release</p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Breaking changes</p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Items resolved in this release</p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Known issues in this release</p><p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">New Items in this release</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6732 </span><span style="font-weight: bold;">OnePractice</span><span style="font-weight: bold;"> Guides Online</span> - The OnePractice Guides are now located on the Software Website</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6896 MetaData no Folders View</span> - OnePractice Provisioning now automatically creates a no folders document view to allow for easy viewing of MetaData.</p>
+<p class="p_Normal" style="page-break-inside: avoid;">#6291<span style="font-weight: bold;"> New Icons for Document Center</span> - The OnePractice Portal now has new Icons.</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6898, #6742 Templates now includes Office 365 User Fields</span> - Templates now allows the use of Office 365 User Fields including First Name, Last Name Full Name, Phone Number, Email and Job Title of the user using</p>
+<p class="p_Normal" style="page-break-inside: avoid;">the software. <span style="background-color: #ffffff;">Please note that a re-install of Templates is required to allow access to the more secure users details. You can find instructions at our support center&nbsp;</span><span style="background-color: #ffffff; text-decoration: underline;"><a href="https://support.hubone.com/en/article/how-to-activate-microsoft-office-365-user-details-for-your-templates" target="_blank" onclick="return HMTrackTopiclink(this);" class="weblink">here</a></span><span style="background-color: #ffffff;">.</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6899 Templates allow multiple clients</span> - Templates now allows the selection of multiple clients. Custom Prompts can be used but apply to all generated templates. Sub folders are disabled.</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#7059 Templates Help New Location</span> - Templates Help is now available on the HubOne Website</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6323 MailManager Globalisation </span>- Mail Manager has been Globalised. As we expand into other territories, we can look at adding multiple languages.</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#7060 Mail Help New Location</span> - Mail Help is now available on the HubOne Website</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#7061 Mail Templates Help New Location </span>- Mail Templates Help is now available on the HubOne Website</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6171 Mail Manager Attachment Renaming and Selection</span> - Mail Now allows attachment renaming and selection</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6688 Mail Saving Individual Email Attachments</span> - Mail Now allows saving of individual attachments</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#7039, #6991 Scan Doctor Limited to Licensed users</span> - Scan Doctor (Beta) is limited to only licensed users</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6996 Scan Doctor Thread Count</span> - Scan Doctor (Beta) Now has the ability to choose the number of active threads.</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6371 CCH Help Now Online </span>- CCH help Files are now available at the HubOne Software Website</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#7048 Templates Client Refresh Documentation </span>- We have now documented Templates Client Refresh</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#7094 Additional Templates Documentation</span> - The documentation for creating templates has been improved.</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#4527 Templates Cache Speed</span> - Templates loading speed has been improved</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#7001 ScanDoctor Telemetry</span> - Telemetry has been added to ScanDoctor (Beta)</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#7051 Repository Move</span> - Our Software Repository now uses GIT instead of old TFS Version Control</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6229 Mail Queuing Encryption</span> - Additional data has been encrypted when queuing to save emails.</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6980 Mail Background Processing</span> - Better Background processing of moved emails implemented</p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">Breaking Changes</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;">There are no breaking changes in this release</p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">Items resolved in this release</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;">#6984 - OnePractice Sample Templates Updated</p>
+<p class="p_Normal" style="page-break-inside: avoid;">#6989 - ScanDoctor (Beta) Input Folder Change - A Change of input folder was not being retained by ScanDoctor</p>
+<p class="p_Normal" style="page-break-inside: avoid;">#7071 - Additional User Fields missing on Job Merge</p>
+<p class="p_Normal" style="page-break-inside: avoid;">#7103 - Rename Templates Application</p>
+<p class="p_Normal" style="page-break-inside: avoid;">#7342 - View Saved Documents Unreliable</p>
+<p class="p_Normal" style="page-break-inside: avoid;">#7343 - Mail: Rename Email Feature sporadic visibility</p>
+<p class="p_Normal" style="page-break-inside: avoid;">#6974 - Scans: Log File Location Update not working</p>
+<p class="p_Normal" style="page-break-inside: avoid;">#4374 - Scans: Duplicate Popups when PDFs Moved</p>
+<p class="p_Normal" style="page-break-inside: avoid;">#7038 - ScanDoctor (Beta): Remove cc after filename</p>
+<p class="p_Normal" style="page-break-inside: avoid;">#7045 - Scans: Processing multiple manual docs causes hang</p>
+<p class="p_Normal" style="page-break-inside: avoid;">#7503 - CCH Integration Guide: Step Missing</p>
+<p class="p_Normal" style="page-break-inside: avoid;">#7050 - Mail: Some MIME content causes failure to save</p>
+<p class="p_Normal" style="page-break-inside: avoid;">#7044 - Scans: Save to Scans Folder pops up wrong message</p>
+<p class="p_Normal" style="page-break-inside: avoid;">#7046 - Scans: Change Message for Processed Documents</p>
+<p class="p_Normal" style="page-break-inside: avoid;">#6995 - ScanDoctor (Beta): Crashes after 60 threads</p>
+<p class="p_Normal" style="page-break-inside: avoid;">#7007 - ScanDoctor (Beta): Remove Text from Logging and add headers</p>
+<p class="p_Normal" style="page-break-inside: avoid;">#7010 - ScanDoctor (Beta): Out of Memory Error</p>
+<p class="p_Normal" style="page-break-inside: avoid;">#7025 - ScanDoctor (Beta): Files failing to OCR</p>
+<p class="p_Normal" style="page-break-inside: avoid;">#7028 - ScanDoctor (Beta): Crash After 3400 files</p>
+<p class="p_Normal" style="page-break-inside: avoid;">#7029 - ScanDoctor (Beta): Interesting Behaviour</p>
+<p class="p_Normal" style="page-break-inside: avoid;">#7082 - SPO Management Shell New URL for Tool</p>
+<p class="p_Normal" style="page-break-inside: avoid;">#6420 - Mail: Category appears white by default</p>
+<p class="p_Normal" style="page-break-inside: avoid;">#7074 - Hire Purchase Template Error</p>
+<p class="p_Normal" style="page-break-inside: avoid;">#6843 - Mail: Open Last Location Not Working</p>
+<p class="p_Normal" style="page-break-inside: avoid;">#6863 - Mail: Category Green - Revert to Blue</p>
+<p class="p_Normal" style="page-break-inside: avoid;">#7040 - Scans: Stuck after scans from scanner</p>
+<p class="p_Normal" style="page-break-inside: avoid;">#6858 - Remove HubOne Branding from iFirm Document Manager</p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">Known issues in this release</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6785 CCH Help Mobile Font</span> - The Mobile font renders poorly.</p>
+<p class="p_Normal" style="page-break-inside: avoid;">WORKAROUND: Use a PC to read the help files</p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6784 </span><span style="font-weight: bold;">OnePractice</span><span style="font-weight: bold;"> Help Mobile Font </span>- The Mobile font renders poorly.</p>
+<p class="p_Normal" style="page-break-inside: avoid;">WORKAROUND: Use a PC to read the help files</p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6891 CCH Templates missing postal address fields</span> - CCH Templates is missing postal address fields in some instances</p>
+<p class="p_Normal" style="page-break-inside: avoid;">WORKAROUND: None</p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6983 Templates: No explanation for Default Field</span> - There is no explanation what is meant by the Default Text in the documentation.</p>
+<p class="p_Normal" style="page-break-inside: avoid;">WORKAROUND: Default Text is that shown if the Field or Alternate Field are blank.</p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#7565 </span><span style="font-weight: bold;">OnePractice</span><span style="font-weight: bold;"> Provisioning does not work with Office 365 Multifactor Authentication</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;">WORKAROUND: Disable MFA for the user performing provisioning</p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#7563 Mail Templates does not work with Multifactor Authentication</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;">WORKAROUND: Disable MFA for users using Mail Templates</p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#7564 Scan Doctor (Beta) does not work with Multifactor Authentication</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;">WORKAROUND: Disable MFA for users using Scan Doctor</p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#7561 Mail: Does not work with Multifactor Authentication</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;">WORKAROUND: Disable MFA for users using Mail</p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#7566 Scans: Does not work with Multifactor Authentication</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;">WORKAROUND: Disable MFA for users using Scans</p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6656 Templates: Stuck refreshing Lists</span> - A small number of users have reported Templates getting stuck on first use refreshing clients list.</p>
+<p class="p_Normal" style="page-break-inside: avoid;">WORKAROUND: Reboot the PC and Clear the Cache seems to resolve the issue.</p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6975 Scans: Using SharePoint Location as Scans Folder does not detect new documents</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;">WORKAROUND: Always use a local folder</p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6418 Migration Manager: Uses Significant time to clean a large document set</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;">WORKAROUND: Break Document Sets into smaller chunks.</p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-inside: avoid;"><span class="f_Heading2">&nbsp;</span></h2>
+<h2 class="p_Heading2" style="page-break-inside: avoid;"><span class="f_Heading2">Version 6.2 Released 5th March 2018</span></h2>
+<p class="p_Normal" style="page-break-inside: avoid;">Welcome to the Release Notes for OnePractice 6.2. This release was authorised on 16 February 2018. This document contains information on the release, and also details fixes included in this release.</p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;">In this document:</p>
+<p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>New items in this release</p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Breaking changes</p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Items resolved in this release</p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Known issues in this release</p><p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">New Items in this Release</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6847 CCH Provisioning</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;">The production provisioning platform was modified to include features specific for CCH iFirm Document Manager. Which includes:</p>
+<p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>The Wolters Kluwer provisioning option</p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Ability to add CCH homepage icons (also relates to #6381)</p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Ability to create a link to a customer's acclipse url from the homepage</p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Green branding applied to the provisioned SharePoint environment</p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Updated sample templates</p><p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6848 Create OCR Solution for Scans</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;">The team have worked on a new project, Scan Doctor. The Scan Doctor app is designed to perform Optical Character Recognition of PDF documents prior to them being consumed and processed by OnePractice Scans. A number of customers have reported that they have a number of PDF files, or regularly generate non-searchable PDF files, which Scans cannot process. Scan Doctor is able to convert these files to Searchable PDF files for<span style="font-weight: bold;"> </span>OnePractice Scans processing. This solution has been developed and is currently in Beta for testing by partners prior to a slated release in version 6.3.</p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6982 CCH Update for Partners</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;">HubOne has signed an agreement with Wolters Kluwer to white label OnePractice as a new product, CCH iFirm Document Manager. This offers a great opportunity for partners to offer Office 365 licencing and support services for CCH iFirm customers that require this.</p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6086 Provisioning Wizard Guide</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;">The guidance for the Provisioning Wizard has been updated.</p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6381 Creation of new </span><span style="font-weight: bold;">OnePractice</span><span style="font-weight: bold;"> Icons for CCH</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;">New icons for the OnePractice Portal Page have been developed to work closely with the Wolters Kluwer look and feel.</p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6732 </span><span style="font-weight: bold;">OnePractice</span><span style="font-weight: bold;"> Guides Online</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;">HubOne has made available our new documentation library, developed for version 6.1. It is available at https://software.hubone.com/help.</p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6923 Scans Upgrade to Include Other Name</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;">Documents coming from various sources include other names for individuals, stopping Scans matching correctly. Scans now include the other name field.</p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#5741 Upgrade of HubOne Software Site</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;">The HubOne Software Site at https://software.hubone.com has undergone a significant upgrade.</p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6301 </span><span style="font-weight: bold;">OnePractice</span><span style="font-weight: bold;"> Mail - Add Auto-refresh functionality</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;">OnePractice Mail now includes auto-refresh functionality for refreshing client lists based on the schedule defined in common app settings.</p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6775 Provisioning - Change to new UI Paradigm</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;">The Provisioning application was difficult to see in extremely high resolution environments. Provisioning has been rewritten to support these common new devices.</p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6870 Single Sign on for CCH iFirm</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;">We have added documentation to enable single sign in for CCH iFirm using Azure Active Directory Enterprise Applications features.</p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#4542 Scans - Allow for Client Exclusion</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;">There is a new feature in Scans which allows the exclusion of specific clients from the application. This is also stored in the settings.</p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6302 </span><span style="font-weight: bold;">OnePractice</span><span style="font-weight: bold;"> Scans - Add Auto-refresh functionality</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;">OnePractice Scans now includes auto-refresh functionality for refreshing client lists based on the schedule defined in common app settings.</p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">Breaking Changes</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;">There are no breaking changes in this release</p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">Items resolved in this release</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;">Please note a significant number of the items below were discovered and resolved during internal testing, on interim builds prior to this release. However they are all documented here for completeness</p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6884 Software Site: Version Number not showing on the downloads page</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6840 Documentation: Small wording change in documentation</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6860 Provisioning: Amend CCH tile Sizes</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6891 Templates and Mail: Opening a recently saved item - Word Error</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;">This was due to non html characters in the file name.</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6893 Mail Templates: Amend CCH Email Sample Template</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6901 Scans: Publisher Name Amendment</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6902 Scans: Removing Clicks in Scans to file documents quicker</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6903 Scans: Window Text Change</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6904 Scans: Reprocess Documents Button Not Working</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6905 Scans: Scanning 1 Document, Popup showed 150 scans remaining</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6906 Scans: Ensuring Selected Items flow up in UI</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6907 Scans: Renaming Rules no longer persisting</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6908 Scans: Amend Tooltip on Reprocess Button</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6917 Documentation: Amend Documentation for Provisioning Tool</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6425 Templates: Amend Version Number</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6426 Scans: Amend Version Number</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6427 Mail: Amend Version Number</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6509 Documentation: Amend Spelling of License</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6518 Provisioning: Missing Text</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6518 Provisioning: Amend Step 3</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6632 Provisioning: Amend Title of Root Site for CCH</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#5738 Templates: Number field type only has whole numbers</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#5873 Provisioning: Multiple runs of Provisioning adding duplicate settings</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6897 Scan Doctor: Warning on Download (Need Code Signing)</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6988 Scan Doctor: Hide Secondary Menu in Scan Doctor</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6990 Scan Doctor: Add a ? Next to Output Folder</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6873 Scans: Optimisation of manual scanning to prevent issue with too many files</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6922 Scans: Switch of Append and Prepend Words</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6964 Scans: Resolution of Log File where comma in customer name</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6965 Scans: Add warning if PDF is Open</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6970 Scans: Ensure Vendor Icon and graphics showing</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6971 Scans: Re-enable theming</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6972 Scans: Resolve BAS Processing Issue Reported by Partner</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6973 Scans: Add Clearer Message for documents already processed in manual mode</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6977 Scans: Wolters Kluwer Version Green from First Launch</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6978 Scans: Text for Client Refresh frequency missing</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6994 Mail: Blue Catgeory not saving to Master Category list for users with multiple accounts</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#4579 Scans: Scans crash when opening on two Windows 10 devices</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6213 Mail: Amend Error Page to be more insightful</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6786 Mail: SharePoint Lists Add Primary Contact not working</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6814 Mail Templates: Grammar and Spellcheck issue with standard templates</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6857 Templates: Job Templates for CCH</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;">Resolved as By-Design waiting for additional API features from WK</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6859 Provisioning: Disable requirement for check-in and check-out for all sites</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6918 Scans: Add commentary on software site to recommend uninstall and reinstall of old SDM for new Scans</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6961 Scans: Issue with too many scans</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6826 Provisioning: Badly Formatted</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6823 Provisioning: Text Squashed</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6822 Documentation: Amend Portal Provisioning Tool Text</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">Known Issues</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6784 Amend Help Font for Mobile Help</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;">The help font on mobiles is not standard.</p>
+<p class="p_Normal" style="page-break-inside: avoid;">WORKAROUND: None</p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6785 Amend Help Font for CCH Mobile Help</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;">The help font for CCH Mobile is not standard</p>
+<p class="p_Normal" style="page-break-inside: avoid;">WORKAROUND: None</p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6995 Scan Doctor Crashes after &gt;60 threads</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;">If Scan Doctor starts too many threads, it enters a race condition.</p>
+<p class="p_Normal" style="page-break-inside: avoid;">WORKAROUND: Use the Thread setting to reduce the number of threads used</p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6960 Templates: App gets stuck on 1st use for the day</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;">There have been a small number of reports (less than 5) of templates not refreshing on 1st use.</p>
+<p class="p_Normal" style="page-break-inside: avoid;">WORKAROUND: Wait 2 minutes and refresh the browser</p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6975 Scans: When using SharePoint or OneDrive as scans location, no popup</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;">When using SharePoint or OneDrive as the Scans folder for Scans, the manual popup may not appear</p>
+<p class="p_Normal" style="page-break-inside: avoid;">WORKAROUND: Only use a standard local folder as your scans location</p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6240 Mail: </span><span style="font-weight: bold;">OnePractice</span><span style="font-weight: bold;"> Category appears white</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;">There have been a small number of reports (less than 2) of the Mail category appearing white</p>
+<p class="p_Normal" style="page-break-inside: avoid;">WORKAROUND: Open Master Categories and add the category manually</p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6527 Migration Manager using legacy licensing</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;">This does not affect end users or partners</p>
+<p class="p_Normal" style="page-break-inside: avoid;">WORKAROUND: None</p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6656 Templates: Stuck Refreshing lists</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;">There have been a small number of reports of templates getting stuck refreshing lists. We are investigating</p>
+<p class="p_Normal" style="page-break-inside: avoid;">WORKAROUND: Wait 2 minutes and refresh the browser</p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6157 SharePoint: Need a method to list and checkin all checked out files in large library</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;">In a large library there is no simple method to list and checkin all checked out files. This is a SharePoint Limitation. We are investigating a solution.</p>
+<p class="p_Normal" style="page-break-inside: avoid;">WORKAROUND: None</p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#4808 SharePoint Search</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;">Clients are reporting difficulty using SharePoint Search, Whilst some is user education, use of metadata eases this problem.</p>
+<p class="p_Normal" style="page-break-inside: avoid;">WORKAROUND: Use Metadata to filter documents even in large lists. Ensure indexing is enabled. Contact us if you need assistance with large lists</p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6353 Document Center OneDrive Permissions Error</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;">Using Files on Demand in Windows 10 Build 1709, some users are reporting issues having read-write access to OneDrive</p>
+<p class="p_Normal" style="page-break-inside: avoid;">WORKAROUND: Remove Mandatory MetaData and Check in/ Check Out</p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">#6418 Migration Manager takes significant time to clean.</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;">On Large document sets with limited RAM and Processor, Migration Manager takes significant time to clean files</p>
+<p class="p_Normal" style="page-break-inside: avoid;">WORKAROUND: Run on a large Azure Server</p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-inside: avoid;"><span class="f_Heading2">Version 6.1 Special Release 19 January 2018</span></h2>
+<p class="p_Normal" style="page-break-inside: avoid;">The following were changes in version 6.1</p>
+<p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>General</p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 26px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:13px;margin-left:-13px">o</span>#6597 - Hosting of Swagger and Flow files on hubone.com for easy download</p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Documentation</p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 26px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:13px;margin-left:-13px">o</span>#6383 - Definition of Look and Feel for CCH</p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 26px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:13px;margin-left:-13px">o</span>#6544 - Migrator Documentation</p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 26px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:13px;margin-left:-13px">o</span>#6622 - SharePoint Site Documentation</p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 26px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:13px;margin-left:-13px">o</span>#6367 - Scans User Guide</p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 26px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:13px;margin-left:-13px">o</span>#6376 - Provisioning User Guide</p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 26px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:13px;margin-left:-13px">o</span>#6162 - CCH iFirm User Guide</p><h2 class="p_Heading2" style="page-break-inside: avoid;"><span class="f_Heading2">&nbsp;</span></h2>
+<h2 class="p_Heading2" style="page-break-inside: avoid;"><span class="f_Heading2">Version 6.0 (19 December 2017)</span></h2>
+<p class="p_Normal" style="page-break-inside: avoid;">The following were changes in version 6.0</p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span style="font-weight: bold;">General</span></p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 13px; margin: 0 0 0 13px;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:13px;margin-left:-13px">o</span>#4484 - Update Partner Portal Sales Kit with Hyperlinks</p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 13px; margin: 0 0 0 13px;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:13px;margin-left:-13px">o</span>#4563 - Update Partner Program Program Details Page</p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 13px; margin: 0 0 0 13px;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:13px;margin-left:-13px">o</span>#4564 - Update Partner Program Sign &nbsp;Up Form</p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 13px; margin: 0 0 0 13px;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:13px;margin-left:-13px">o</span>#4565 - Update Become a Partner Page</p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 13px; margin: 0 0 0 13px;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:13px;margin-left:-13px">o</span>#4566 - Map Registration Process from <a href="http://www.hubone.com" target="_blank" onclick="return HMTrackTopiclink(this);" class="weblink">www.hubone.com</a> to partner portal</p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 13px; margin: 0 0 0 13px;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:13px;margin-left:-13px">o</span>#4567 - Update FAQ Page for Partners</p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 13px; margin: 0 0 0 13px;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:13px;margin-left:-13px">o</span>#4568 - Update <a href="http://www.hubone.com" target="_blank" onclick="return HMTrackTopiclink(this);" class="weblink">www.hubone.com</a> for partner page registration</p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 13px; margin: 0 0 0 13px;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:13px;margin-left:-13px">o</span>#4569 - Obsolete Bug (Refers to old Partner Portal)</p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 13px; margin: 0 0 0 13px;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:13px;margin-left:-13px">o</span>#4570 - Resolve issue with website Performance</p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 13px; margin: 0 0 0 13px;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:13px;margin-left:-13px">o</span>#4571 - Move Support Forums from Website to <a href="https://hubone.freshdesk.com" target="_blank" onclick="return HMTrackTopiclink(this);" class="weblink">https://hubone.freshdesk.com</a></p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 13px; margin: 0 0 0 13px;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:13px;margin-left:-13px">o</span>#4572 - Update Knowledge Base Page</p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 13px; margin: 0 0 0 13px;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:13px;margin-left:-13px">o</span>#4845 - Resolve Issue with Contact Information in &nbsp;Partner Portal</p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 13px; margin: 0 0 0 13px;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:13px;margin-left:-13px">o</span>#4844 - Obsolete</p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 0; margin: 0 0 0 13px;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span style="font-weight: bold;">Overall Software</span></p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 26px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:13px;margin-left:-13px">o</span>#6073, #6148 - Release of new MetaData Documentation</p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 26px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:13px;margin-left:-13px">o</span>#6123 - SharePoint Lists - Add Family Group as Default Column</p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 26px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:13px;margin-left:-13px">o</span>#6214 - Add Additional Telemetry</p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 26px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:13px;margin-left:-13px">o</span>#6230 - SharePoint Lists - Add Primary Contact Title Column</p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 26px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:13px;margin-left:-13px">o</span>#6265 - Add Telemetry logging to SP Lists</p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 26px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:13px;margin-left:-13px">o</span>#6317 - Software Naming Rebrand</p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 26px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:13px;margin-left:-13px">o</span>#6333 - Added OneNote to the types of Document that can be created from the New Button</p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 26px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:13px;margin-left:-13px">o</span>#6142 - Add New Settings (Populate Clients, Populate Groups)</p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 26px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:13px;margin-left:-13px">o</span>#6152 - Check for ClientGroup Setting and Add MetaData</p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 26px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:13px;margin-left:-13px">o</span>#6160 - Amend Behavior of Client and ClientGroup Columns</p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 26px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:13px;margin-left:-13px">o</span>#6161 - Add Manager and Partner Fields and Per Client and ClientGroup</p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 26px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:13px;margin-left:-13px">o</span>#6174 - Change UserAgent for XPM and WFM Integration</p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 26px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:13px;margin-left:-13px">o</span>#6224 - Explain Mandatory MetaData in Documentation</p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 26px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:13px;margin-left:-13px">o</span>#4552, #4554, #4555, #4556, #4557, #4558, #4560 - Multiple Documentation Bugs</p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span style="font-weight: bold;">OnePractice</span><span style="font-weight: bold;"> Scans</span></p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 26px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:13px;margin-left:-13px">o</span>#3213 - Integrate Scans with Licensing</p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 26px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:13px;margin-left:-13px">o</span>#4504 - Cater for LastName, FirstName and FirstName LastName combinations</p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 26px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:13px;margin-left:-13px">o</span>#5132 - Add Visual Indication of outstanding failed scans in the Upload Window</p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 26px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:13px;margin-left:-13px">o</span>#5133 - Configure Installer to create Desktop Shortcut</p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 26px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:13px;margin-left:-13px">o</span>#6218 - Ensure UseCustomGroupMetaData Setting working as designed</p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 26px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:13px;margin-left:-13px">o</span>#6219 - Update File Renaming Tool to allow custom appended words to be prepended</p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 26px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:13px;margin-left:-13px">o</span>#4815 - Resolve Issue with New Adobe Acrobat Preview Crash</p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 26px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:13px;margin-left:-13px">o</span>#6147 - Resolve Issue with Date MetaData</p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 26px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:13px;margin-left:-13px">o</span>#4377 - Duplicate Pop Up Windows</p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span style="font-weight: bold;">OnePractice</span><span style="font-weight: bold;"> Mail</span></p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 26px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:13px;margin-left:-13px">o</span>#4529 - Push Saving Process into Background Queue</p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 26px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:13px;margin-left:-13px">o</span>#5130 - Item ID Sometimes Missing if Client Moves Email to quickly. Add Warning</p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 26px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:13px;margin-left:-13px">o</span>#6142 - Ensure Autoselected Clients show the Subfolders Button</p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 26px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:13px;margin-left:-13px">o</span>#6208 - Resolve issue with multiple comma delimited primary contact email addresses</p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 26px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:13px;margin-left:-13px">o</span>#6260 - Add Notification Email for failed emails</p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 26px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:13px;margin-left:-13px">o</span>#6261 - Secure Queue Dashboard</p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 26px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:13px;margin-left:-13px">o</span>#6356 - Resolve issue with IE and Edge not refreshing on Schedule</p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 26px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:13px;margin-left:-13px">o</span>#4481 - SharePoint URL not Saving</p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span style="font-weight: bold;">OnePractice</span><span style="font-weight: bold;"> Mail Templates</span></p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 26px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:13px;margin-left:-13px">o</span>#6190 - Resolve Client Selection Issue when using SharePoint Lists</p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 26px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:13px;margin-left:-13px">o</span>#6225 - Amend Software to more gracefully handle Non printable characters</p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 26px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:13px;margin-left:-13px">o</span>#6226 - Amend to handle Spellcheck Formatting</p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span style="font-weight: bold;">OnePractice</span><span style="font-weight: bold;"> Templates</span></p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 26px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:13px;margin-left:-13px">o</span>#5873 - Copy to Clipboard not working after Google Chrome Update</p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 26px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:13px;margin-left:-13px">o</span>#5993 - Remove Full Postbacks on Buttons to avoid iFrame Issue</p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 26px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:13px;margin-left:-13px">o</span>#6191 - Render Custom Dialog Fields in Headers and Footers</p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 26px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:13px;margin-left:-13px">o</span>#6296 - Resolve Download issue for SP Lists Jobs</p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 26px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:13px;margin-left:-13px">o</span>#6297 - Make Intent of File to Client and Donwload File Clearer to End User</p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 26px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:13px;margin-left:-13px">o</span>#6400 - Add Auto Refresh Functionality</p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 26px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:13px;margin-left:-13px">o</span>#6326 - Add Client and ClientGroup as Template Fields</p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 26px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:13px;margin-left:-13px">o</span>#6328 - Resolve issue populating Partner and Manager Fields from SP Lists</p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 26px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:13px;margin-left:-13px">o</span>#6352 - Ignore hidden Sheets in Excel Worksheet</p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 26px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:13px;margin-left:-13px">o</span>#5752 - Add Caching by Tenancy and Doc Center URL Enabling Multi Environment Scenarios</p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 26px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:13px;margin-left:-13px">o</span>#3969 - Add DocumentID Functionality</p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span style="font-weight: bold;">OnePractice</span><span style="font-weight: bold;"> Provisioning</span></p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 26px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:13px;margin-left:-13px">o</span>#5930 - Add Option to Auto Create Client Folders</p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 26px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:13px;margin-left:-13px">o</span>#6192 - Update HubOne Test Key in Provisioning </p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 26px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:13px;margin-left:-13px">o</span>#6337 - Add List Refresh Frequency Setting Option</p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 26px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:13px;margin-left:-13px">o</span>#4328, #4449 - Amend Support Tile to Navigate to <a href="https://hubone.freshdesk.com" target="_blank" onclick="return HMTrackTopiclink(this);" class="weblink">https://hubone.freshdesk.com</a></p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 26px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:13px;margin-left:-13px">o</span>#6140 - Make MetaData Columns Searchable</p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span style="font-weight: bold;">OnePractice</span><span style="font-weight: bold;"> iFirm Integration</span></p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 26px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:13px;margin-left:-13px">o</span>#6217 - Resolve issue with Flows for specific customer</p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span style="font-weight: bold;">OnePractice</span><span style="font-weight: bold;"> Migration</span></p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 26px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:13px;margin-left:-13px">o</span>#6259 - Add '_' to file checking rules</p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 26px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:13px;margin-left:-13px">o</span>#6118 - Update due to SharePoint Client Release</p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 26px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:13px;margin-left:-13px">o</span>#4991 - Resolve Issue with Large File Sets (Answer Reduce Size of File Set on RAM Limited Machine)</p><p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">Known Issues</span></p>
+<p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span style="font-weight: bold;">#6353 - Document Center Sync with New OneDrive (Windows Build 1709)</span><br />
+When using the new OneDrive Client to Synchronize the Document Center, you may find a &quot;Lock&quot; icon next to your files.<br />
+WORKAROUND: Remove Versioning, Mandatory Fields and disable the Content Organiser. The lock will disappear.</p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span style="font-weight: bold;">#4579 - Scanned Document Manger Crashes when opening in Windows 10</span><br />
+When using an older version of HubOne Scans, it may crash when opening in Windows 10<br />
+WORKAROUND: Download the latest version from <a href="http://software.hubone.com" target="_blank" onclick="return HMTrackTopiclink(this);" class="weblink">http://software.hubone.com</a></p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span style="font-weight: bold;">#4808 - SharePoint Document Center Search</span><br />
+A small number of users have reported issues using SharePoint Search.<br />
+WORKAROUND: In advance of new documentation, please train users in SharePoint Search</p><p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span style="font-weight: bold;">#6213 - Mail Error Messages are not very insightful</span><br />
+Error messages from Mail as cryptic and not helpful<br />
+WORKAROUND: Report all errors to us.</p><p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+
+  $(document).ready(function(){
+    $(window).bind('resize', function() {
+      var y = $('#idheader').height(); 
+      $('#idcontent').css('margin-top', y);
+      var par = window.parent;
+      if ($( par ).width() <= $( window ).width()+20) {
+        $('#idheader').css('position', 'relative');
+        $('#idcontent').css('margin-top', 0);
+        $('#idbacktotop').css('display', 'block');
+        $('.hmanchor').css('margin-top', -20);
+	$('.hmanchor').css('padding-top', 20);
+      }
+      else {
+        $('#idheader').css('position', 'fixed');
+        $('#idcontent').css('margin-top', $('#idheader').height());
+        $('#idbacktotop').css('display', 'none');
+        $('.hmanchor').css('margin-top', -y-20);
+	$('.hmanchor').css('padding-top', y+20);
+      }
+    });
+    
+    $(window).resize(); //trigger event for initially small displays
+  });
+
+if ((!parent.hmNavigationFrame) && (parent.location) && (parent.location.href)) { $('.sync-toc').show();$('p.crumbs').hide();}
+
+</script>
+</body>
+</html>

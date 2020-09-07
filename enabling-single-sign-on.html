@@ -1,0 +1,205 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>CCH iFirm Integration Guide &gt; Single Sign-On &gt; Enabling Single Sign-on</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="This topic describes how to enable Single Sign-on with Office 365 and CCH iFirm. The user will be able to automatically sign into CCH iFirm from within SharePoint, as it will be" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+        padding:0; 
+        background: #ffffff; 
+        font-family: 'Calibri Light'
+      } 
+      div#printheader { display: none; }
+      #idheader { 
+        width:100%; 
+        height:auto; 
+        padding: 0; 
+        margin: 0;
+        position: fixed;
+        top: 0;
+        z-index: 2;
+      } 
+      /* The "min-height" for "#idheader table" ensures that the (blue) header of the topic
+         has at least the same height as the header of the navigation panel left of it */
+      #idheader table { background: #33a3dc; min-height: 59px }             
+      #idheader h1 span { color: #FFF }     
+      #idnav {
+        text-align: right;
+        width: 126px;
+        vertical-align: middle;        
+      } 
+      #idnav a { text-decoration: none }
+      #idnav span {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        margin-left: 15px;
+        background:url('hm_webhelp_buttons_l.blue.png') top left no-repeat;
+      } 
+      #idnav a span {
+        background-image:url('hm_webhelp_buttons_op.white.png');
+      } 
+      #idnav a span:hover {
+        background-image:url('hm_webhelp_buttons_op.orange.png');
+      } 
+      #idnav span.hmbtnprev { background-position: 0 -32px }
+      #idnav span.hmbtnnext { background-position: -24px -32px }
+      #idnav span.hmbtntop  { background-position: -48px -32px }
+      #idnav span.hmbtntoggle  { width: 20px; background-position: -70px -32px }
+      #idnav span.hmbtnprint  { background-position: -88px -32px }
+
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }      
+      #switchtoggles { text-align: right; padding: 0 2px 0 0; font-size: 90%; } 
+      .sync-toc { color: #FFF; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #FFF; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #FFF; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: -4em; padding-top: 4em }	  
+   </style>
+   <style TYPE="text/css" media="print">
+      div#idheader, img.dropdown-toggle-icon, p.help-url { display:none } 
+   </style>
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "enabling-single-sign-on.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+
+
+<div id="printheader"><h1 class="p_Heading1" style="page-break-inside: avoid;"><span class="f_Heading1">Enabling Single Sign-on</span></h1>
+</div>
+<div id="idheader">
+<div id="idheaderbg">
+<table style="width:100%;border:none;margin:0px;" cellspacing="0" cellpadding="0"> 
+  <tr>
+    <td class="topichead" style="text-align:left; vertical-align:bottom">
+      <p class="sync-toc">&lt;&lt; <a rel="nofollow" href="index.html?enabling-single-sign-on.html" target="_top">Click to Display Table of Contents</a> &gt;&gt;</p>
+      <p class="crumbs"><b>Navigation:</b>&nbsp;
+      
+      <a href="cch-ifirm-integration-guide.html">CCH iFirm Integration Guide</a> &gt; <a href="single-sign-on.html">Single Sign-On</a>&nbsp;&gt;</p>
+   
+      <h1 class="p_Heading1" style="page-break-inside: avoid;"><span class="f_Heading1">Enabling Single Sign-on</span></h1>
+
+    </td>
+    <td class="topichead" id="idnav">
+      
+      <a href="single-sign-on.html" title="Previous Topic"><span class="hmbtnprev"></span></a>
+      <a href="single-sign-on.html" title="Parent Chapter"><span class="hmbtntop"></span></a>
+      <a href="assigning-users-and-groups.html" title="Next Topic"><span class="hmbtnnext"></span></a>
+      
+    </td>
+  </tr>  
+</table>
+</div>
+</div>  
+
+<div id="idcontent"><div id="innerdiv">
+<!-- Ask Internet Explorer 6.users to update their obsolete and dangerous browser --> 
+<!--[if lt IE 7]><div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;'><a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div><![endif]-->
+
+<!--ZOOMRESTART-->
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;">This topic describes how to enable Single Sign-on with Office 365 and CCH iFirm. The user will be able to automatically sign into CCH iFirm from within SharePoint, as it will be available as an icon in the Office 365 application launcher.</p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">Please note</span>, you will require Enterprise Mobility and Security E5, and Azure AD Premium, to enable this feature.</p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-inside: avoid;"><span class="f_Heading2">Adding CCH iFirm as an unlisted application</span></h2>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 20px; margin-left: 0;"><span class="f_Normal" style="display:inline-block;width:20px;margin-left:-20px">1.</span>Navigate to <a href="https://portal.azure.com" target="_blank" onclick="return HMTrackTopiclink(this);" class="weblink">https://portal.azure.com</a> and sign in using your Azure Active Directory administrator account</p><p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 20px; margin-left: 0;"><span class="f_Normal" style="display:inline-block;width:20px;margin-left:-20px">2.</span>Click on <span style="font-weight: bold;">Azure Active Directory</span> located in the menu to the left of the page</p><p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 20px; margin-left: 0;"><span class="f_Normal" style="display:inline-block;width:20px;margin-left:-20px">3.</span>Then select <span style="font-weight: bold;">Enterprise Applications</span> </p><p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<div class="p_Normal" style="page-break-inside: avoid;"><img alt="SSO-azure1" style="width:30%;max-width:829px;height:auto;border:none" src="sso-azure1.jpg"/></div>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 20px; margin-left: 0;"><span class="f_Normal" style="display:inline-block;width:20px;margin-left:-20px">4.</span>Click <span style="font-weight: bold;">New application </span></p><p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<div class="p_Normal" style="page-break-inside: avoid;"><img alt="SSO-azure2" style="width:10%;max-width:222px;height:auto;border:none" src="sso-azure2.jpg"/></div>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-weight: bold;">Quick tip:</span> Before creating a new application, use the search function to check to see if the app already exists in the application gallery. If the app is found and its description mentions &quot;single sign-on&quot;, then the application is already supported for federated single sign-on.</p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 20px; margin-left: 0;"><span class="f_Normal" style="display:inline-block;width:20px;margin-left:-20px">5.</span> Select <span style="font-weight: bold;">Non-gallery application,</span> enter a name for the app (e.g. CCH iFirm Portal) and click <span style="font-weight: bold;">Add</span></p><p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<div class="p_Normal" style="page-break-inside: avoid;"><img alt="SSO-azure3" style="width:60%;max-width:1788px;height:auto;border:none" src="sso-azure3.jpg"/></div>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;">Adding an application this way provides a very similar experience to the one available for pre-integrated applications. </p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 20px; margin-left: 0;"><span class="f_Normal" style="display:inline-block;width:20px;margin-left:-20px">6.</span> Select <span style="font-weight: bold;">Configure single sign-on</span></p><p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<div class="p_Normal" style="page-break-inside: avoid;"><img alt="SSO-azure4" style="width:60%;max-width:1767px;height:auto;border:none" src="sso-azure4.png"/></div>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 20px; margin-left: 0;"><span class="f_Normal" style="display:inline-block;width:20px;margin-left:-20px">7.</span>Select <span style="font-weight: bold;">Password-based Sign-on</span> from the dropdown</p><p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<div class="p_Normal" style="page-break-inside: avoid;"><img alt="clip0238" style="width:50%;max-width:798px;height:auto;border:none" src="clip0238.png"/></div>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<h2 class="p_Heading2" style="page-break-inside: avoid;"><span class="f_Heading2">Password Single Sign-On</span></h2>
+<p class="p_Normal" style="page-break-inside: avoid;">Select this option to configure password-based single sign-on for a web application that has an HTML sign-in page such as CCH iFirm. Password-based SSO, also referred to as password vaulting, enables you to manage user access and passwords to web applications that don't support identity federation. It is also useful for scenarios where several users need to share a single account, such as to your company's social media app accounts.</p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="text-indent: 0; page-break-inside: avoid; padding-left: 20px; margin-left: 0;"><span class="f_Normal" style="display:inline-block;width:20px;margin-left:-20px">8.</span>You must then enter the URL of the application's web-based sign-in page and click <span style="font-weight: bold;">Save</span>. <span style="font-weight: bold;">Note,</span> this must be the page that includes the username and password input fields.</p><p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<div class="p_Normal" style="page-break-inside: avoid;"><img alt="SSO-azure6" style="width:40%;max-width:1151px;height:auto;border:none" src="sso-azure6.png"/></div>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><span style="font-style: italic;">Example, webpage with username and password fields:</span></p>
+<div class="p_Normal" style="page-break-inside: avoid;"><img alt="SSO-azure7" style="width:75%;max-width:1965px;height:auto;border:none" src="sso-azure7.png"/></div>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;">Once entered, Azure AD starts a process to parse the sign-in page for a username input and a password input. </p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;">If the process is not successful, you will be guided through an alternate process of installing a browser extension (requires Internet Explorer, Chrome, or Firefox) that will allow you to manually capture the fields.</p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;">Once the sign-in page is captured, users and groups may be assigned and credential policies can be set.</p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+
+  $(document).ready(function(){
+    $(window).bind('resize', function() {
+      var y = $('#idheader').height(); 
+      $('#idcontent').css('margin-top', y);
+      var par = window.parent;
+      if ($( par ).width() <= $( window ).width()+20) {
+        $('#idheader').css('position', 'relative');
+        $('#idcontent').css('margin-top', 0);
+        $('#idbacktotop').css('display', 'block');
+        $('.hmanchor').css('margin-top', -20);
+	$('.hmanchor').css('padding-top', 20);
+      }
+      else {
+        $('#idheader').css('position', 'fixed');
+        $('#idcontent').css('margin-top', $('#idheader').height());
+        $('#idbacktotop').css('display', 'none');
+        $('.hmanchor').css('margin-top', -y-20);
+	$('.hmanchor').css('padding-top', y+20);
+      }
+    });
+    
+    $(window).resize(); //trigger event for initially small displays
+  });
+
+if ((!parent.hmNavigationFrame) && (parent.location) && (parent.location.href)) { $('.sync-toc').show();$('p.crumbs').hide();}
+
+</script>
+</body>
+</html>

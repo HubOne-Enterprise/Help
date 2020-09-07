@@ -1,0 +1,594 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>CCH iFirm Integration Guide &gt; Installation and Configuration of the Flows &gt; Part 2. Implement Flow #3</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Case Physical Address,Update SP item Physical Address,Update SP item Postal Address,When a HTTP request is received" />
+   <meta name="description" content="There are three Flow workflows to configure the integration with CCH iFirm Practice Manager. They are implemented in reverse order. The following instructions show how to..." />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+        padding:0; 
+        background: #ffffff; 
+        font-family: 'Calibri Light'
+      } 
+      div#printheader { display: none; }
+      #idheader { 
+        width:100%; 
+        height:auto; 
+        padding: 0; 
+        margin: 0;
+        position: fixed;
+        top: 0;
+        z-index: 2;
+      } 
+      /* The "min-height" for "#idheader table" ensures that the (blue) header of the topic
+         has at least the same height as the header of the navigation panel left of it */
+      #idheader table { background: #33a3dc; min-height: 59px }             
+      #idheader h1 span { color: #FFF }     
+      #idnav {
+        text-align: right;
+        width: 126px;
+        vertical-align: middle;        
+      } 
+      #idnav a { text-decoration: none }
+      #idnav span {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        margin-left: 15px;
+        background:url('hm_webhelp_buttons_l.blue.png') top left no-repeat;
+      } 
+      #idnav a span {
+        background-image:url('hm_webhelp_buttons_op.white.png');
+      } 
+      #idnav a span:hover {
+        background-image:url('hm_webhelp_buttons_op.orange.png');
+      } 
+      #idnav span.hmbtnprev { background-position: 0 -32px }
+      #idnav span.hmbtnnext { background-position: -24px -32px }
+      #idnav span.hmbtntop  { background-position: -48px -32px }
+      #idnav span.hmbtntoggle  { width: 20px; background-position: -70px -32px }
+      #idnav span.hmbtnprint  { background-position: -88px -32px }
+
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }      
+      #switchtoggles { text-align: right; padding: 0 2px 0 0; font-size: 90%; } 
+      .sync-toc { color: #FFF; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #FFF; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #FFF; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: -4em; padding-top: 4em }	  
+   </style>
+   <style TYPE="text/css" media="print">
+      div#idheader, img.dropdown-toggle-icon, p.help-url { display:none } 
+   </style>
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "step-3_-implement-flow-3.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+
+
+<div id="printheader"><h1 class="p_Heading1" style="page-break-inside: avoid;"><span class="f_Heading1">Part 2. Implement Flow #3</span></h1>
+</div>
+<div id="idheader">
+<div id="idheaderbg">
+<table style="width:100%;border:none;margin:0px;" cellspacing="0" cellpadding="0"> 
+  <tr>
+    <td class="topichead" style="text-align:left; vertical-align:bottom">
+      <p class="sync-toc">&lt;&lt; <a rel="nofollow" href="index.html?step-3_-implement-flow-3.html" target="_top">Click to Display Table of Contents</a> &gt;&gt;</p>
+      <p class="crumbs"><b>Navigation:</b>&nbsp;
+      
+      <a href="cch-ifirm-integration-guide.html">CCH iFirm Integration Guide</a> &gt; <a href="installation-and-configuration-flows.html">Installation and Configuration of the Flows</a>&nbsp;&gt;</p>
+   
+      <h1 class="p_Heading1" style="page-break-inside: avoid;"><span class="f_Heading1">Part 2. Implement Flow #3</span></h1>
+
+    </td>
+    <td class="topichead" id="idnav">
+      
+      <a href="step-2_-login-and-initialize-m.html" title="Previous Topic"><span class="hmbtnprev"></span></a>
+      <a href="installation-and-configuration-flows.html" title="Parent Chapter"><span class="hmbtntop"></span></a>
+      <a href="step-4_-implement-flow-2.html" title="Next Topic"><span class="hmbtnnext"></span></a>
+      
+    </td>
+  </tr>  
+</table>
+</div>
+</div>  
+
+<div id="idcontent"><div id="innerdiv">
+<!-- Ask Internet Explorer 6.users to update their obsolete and dangerous browser --> 
+<!--[if lt IE 7]><div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;'><a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div><![endif]-->
+
+<!--ZOOMRESTART-->
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;">There are three Flow workflows to configure the integration with CCH iFirm Practice Manager. They are implemented in reverse order. The following instructions show how to implement and configure Flow #3.</p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<div style="text-align: left; text-indent: 0; page-break-inside: avoid; padding: 0 0 0 0; margin: 0 0 0 0;"><table style="width:100%; border:solid 2px #000000; border-spacing:0; border-collapse:collapse;">
+<thead>
+<tr>
+<th style="vertical-align:top; width:69px; background-color:#ED7D31; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;"><span style="color: #ffffff;">Step</span></p>
+</th>
+<th style="vertical-align:top; width:381px; background-color:#ED7D31; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="text-align: center; page-break-inside: avoid;"><span style="color: #ffffff;">Instructions</span></p>
+</th>
+<th style="vertical-align:top; width:654px; background-color:#ED7D31; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="text-align: center; page-break-inside: avoid;"><span style="color: #ffffff;">Screenshot</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:top; width:69px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;">1</p>
+</td>
+<td style="vertical-align:top; width:381px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;">Navigate to Flow.</p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;"><a href="https://flow.microsoft.com" target="_blank" onclick="return HMTrackTopiclink(this);" class="weblink">https://flow.microsoft.com</a></p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:654px; padding:2px; border:solid thin #000000;"><div class="p_Normal" style="text-align: center; page-break-inside: avoid;"><div style="margin:0 auto 0 auto;width:99%;max-width:913px;height:auto;"><img alt="clip0055" style="width:100%;height:auto;border:none" src="clip0055.png"/></div></div>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:69px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;">2</p>
+</td>
+<td style="vertical-align:top; width:381px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;">Click <span style="font-weight: bold;">My Flows</span> then <span style="font-weight: bold;">Import</span>.</p>
+</td>
+<td style="vertical-align:top; width:654px; padding:2px; border:solid thin #000000;"><div class="p_Normal" style="text-align: center; page-break-inside: avoid;"><div style="margin:0 auto 0 auto;width:99%;max-width:1506px;height:auto;"><img alt="clip0066" style="width:100%;height:auto;border:none" src="clip0066.png"/></div></div>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:69px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;">3</p>
+</td>
+<td style="vertical-align:top; width:381px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;">Download Flow #3 <a href="https://software.hubone.com/cchsynch/cchsynch3.zip" target="_blank" onclick="return HMTrackTopiclink(this);" class="weblink">here</a>.</p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;">Then import the Flow (the zip file). </p>
+<p class="p_Normal" style="page-break-inside: avoid;">Do not extract the files, simply upload the entire zip. </p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;">Please wait while it loads the zip file.</p>
+</td>
+<td style="vertical-align:top; width:654px; padding:2px; border:solid thin #000000;"><div class="p_Normal" style="text-align: center; page-break-inside: avoid;"><div style="margin:0 auto 0 auto;width:99%;max-width:1233px;height:auto;"><img alt="clip0067" style="width:100%;height:auto;border:none" src="clip0067.png"/></div></div>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:69px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;">4</p>
+</td>
+<td style="vertical-align:top; width:381px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;">If the<span style="font-weight: bold;"> CCH Synch Step 3 </span>Import Setup link is <span style="font-weight: bold;">Create as new</span>, click on the link and then <span style="font-weight: bold;">Save</span>. Then go to step 6.</p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;">If the link is <span style="font-weight: bold;">Update</span>, click the link.</p>
+</td>
+<td style="vertical-align:top; width:654px; padding:2px; border:solid thin #000000;"><div class="p_Normal" style="text-align: center; page-break-inside: avoid;"><div style="margin:0 auto 0 auto;width:99%;max-width:2138px;height:auto;"><img alt="importflow3-step4.1" style="width:100%;height:auto;border:none" src="importflow3-step4.1.png"/></div></div>
+<p class="p_Normal" style="text-align: center; page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="text-align: center; page-break-inside: avoid;">OR</p>
+<p class="p_Normal" style="text-align: center; page-break-inside: avoid;">&nbsp;</p>
+<div class="p_Normal" style="text-align: center; page-break-inside: avoid;"><div style="margin:0 auto 0 auto;width:99%;max-width:1213px;height:auto;"><img alt="clip0068" style="width:100%;height:auto;border:none" src="clip0068.png"/></div></div>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:69px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;">5</p>
+</td>
+<td style="vertical-align:top; width:381px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;">Choose <span style="font-weight: bold;">Create as New</span> from the Setup dropdown list, and click <span style="font-weight: bold;">Save</span>.</p>
+</td>
+<td style="vertical-align:top; width:654px; padding:2px; border:solid thin #000000;"><div class="p_Normal" style="text-align: center; page-break-inside: avoid;"><div style="margin:0 auto 0 auto;width:99%;max-width:501px;height:auto;"><img alt="clip0069" style="width:100%;height:auto;border:none" src="clip0069.png"/></div></div>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:69px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;">6</p>
+</td>
+<td style="vertical-align:top; width:381px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;">Select the SharePoint Connection and click <span style="font-weight: bold;">Select during import</span>.</p>
+</td>
+<td style="vertical-align:top; width:654px; padding:2px; border:solid thin #000000;"><div class="p_Normal" style="text-align: center; page-break-inside: avoid;"><div style="margin:0 auto 0 auto;width:99%;max-width:2057px;height:auto;"><img alt="clip0070" style="width:100%;height:auto;border:none" src="clip0070.png"/></div></div>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:69px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;">7</p>
+</td>
+<td style="vertical-align:top; width:381px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;">Click <span style="font-weight: bold;">+ Create new</span>.</p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;">This will open a new browser tab or window. </p>
+</td>
+<td style="vertical-align:top; width:654px; padding:2px; border:solid thin #000000;"><div class="p_Normal" style="text-align: center; page-break-inside: avoid;"><div style="margin:0 auto 0 auto;width:99%;max-width:484px;height:auto;"><img alt="clip0071" style="width:100%;height:auto;border:none" src="clip0071.png"/></div></div>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:69px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;">8</p>
+</td>
+<td style="vertical-align:top; width:381px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;">Click <span style="font-weight: bold;">New connection</span>.</p>
+</td>
+<td style="vertical-align:top; width:654px; padding:2px; border:solid thin #000000;"><div class="p_Normal" style="text-align: center; page-break-inside: avoid;"><div style="margin:0 auto 0 auto;width:99%;max-width:525px;height:auto;"><img alt="clip0072" style="width:100%;height:auto;border:none" src="clip0072.png"/></div></div>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:69px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;">9</p>
+</td>
+<td style="vertical-align:top; width:381px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;">Scroll down and select <span style="font-weight: bold;">SharePoint </span>by clicking the <span style="font-weight: bold;">+</span> to the right.</p>
+</td>
+<td style="vertical-align:top; width:654px; padding:2px; border:solid thin #000000;"><div class="p_Normal" style="text-align: center; page-break-inside: avoid;"><div style="margin:0 auto 0 auto;width:99%;max-width:1839px;height:auto;"><img alt="clip0073" style="width:100%;height:auto;border:none" src="clip0073.png"/></div></div>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:69px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;">10</p>
+</td>
+<td style="vertical-align:top; width:381px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;">Leave as Default: <span style="font-weight: bold;">Connect directly (cloud-services)</span></p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;">Then click <span style="font-weight: bold;">Create</span>.</p>
+</td>
+<td style="vertical-align:top; width:654px; padding:2px; border:solid thin #000000;"><div class="p_Normal" style="text-align: center; page-break-inside: avoid;"><div style="margin:0 auto 0 auto;width:99%;max-width:598px;height:auto;"><img alt="clip0074" style="width:100%;height:auto;border:none" src="clip0074.png"/></div></div>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:69px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;">11</p>
+</td>
+<td style="vertical-align:top; width:381px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;">Sign in using your global admin account.</p>
+</td>
+<td style="vertical-align:top; width:654px; padding:2px; border:solid thin #000000;"><div class="p_Normal" style="text-align: center; page-break-inside: avoid;"><div style="margin:0 auto 0 auto;width:99%;max-width:428px;height:auto;"><img alt="clip0075" style="width:100%;height:auto;border:none" src="clip0075.png"/></div></div>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:69px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;">12</p>
+</td>
+<td style="vertical-align:top; width:381px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;">Close that browser tab/window.</p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;">Back on the original Flow screen, select the new SharePoint Connection and click <span style="font-weight: bold;">Save</span>.</p>
+</td>
+<td style="vertical-align:top; width:654px; padding:2px; border:solid thin #000000;"><div class="p_Normal" style="text-align: center; page-break-inside: avoid;"><div style="margin:0 auto 0 auto;width:99%;max-width:489px;height:auto;"><img alt="clip0076" style="width:100%;height:auto;border:none" src="clip0076.png"/></div></div>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:69px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;">13</p>
+</td>
+<td style="vertical-align:top; width:381px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;">Select the CCH iFirm Connection (Resource Type: Connector) by clicking <span style="font-weight: bold;">Select during import</span>.</p>
+</td>
+<td style="vertical-align:top; width:654px; padding:2px; border:solid thin #000000;"><div class="p_Normal" style="text-align: center; page-break-inside: avoid;"><div style="margin:0 auto 0 auto;width:99%;max-width:1991px;height:auto;"><img alt="clip0070 - Connector" style="width:100%;height:auto;border:none" src="hmfile_hash_a89a0108.png"/></div></div>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:69px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;">14</p>
+</td>
+<td style="vertical-align:top; width:381px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;"> Click <span style="font-weight: bold;">CCH iFirm</span> and click <span style="font-weight: bold;">Save</span>.</p>
+</td>
+<td style="vertical-align:top; width:654px; padding:2px; border:solid thin #000000;"><div class="p_Normal" style="text-align: center; page-break-inside: avoid;"><div style="margin:0 auto 0 auto;width:99%;max-width:481px;height:auto;"><img alt="clip0077" style="width:100%;height:auto;border:none" src="clip0077.png"/></div></div>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:69px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;">15</p>
+</td>
+<td style="vertical-align:top; width:381px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;">Select the bottom connection by clicking <span style="font-weight: bold;">Select during import</span>.</p>
+</td>
+<td style="vertical-align:top; width:654px; padding:2px; border:solid thin #000000;"><div class="p_Normal" style="text-align: center; page-break-inside: avoid;"><div style="margin:0 auto 0 auto;width:99%;max-width:1983px;height:auto;"><img alt="clip0070 - Connection" style="width:100%;height:auto;border:none" src="hmfile_hash_e7a7382a.png"/></div></div>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:69px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;">16</p>
+</td>
+<td style="vertical-align:top; width:381px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;">Click <span style="font-weight: bold;">+ Create New</span>.</p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;">This will open a new browser tab or window.</p>
+</td>
+<td style="vertical-align:top; width:654px; padding:2px; border:solid thin #000000;"><div class="p_Normal" style="text-align: center; page-break-inside: avoid;"><div style="margin:0 auto 0 auto;width:99%;max-width:487px;height:auto;"><img alt="clip0078" style="width:100%;height:auto;border:none" src="clip0078.png"/></div></div>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:69px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;">17</p>
+</td>
+<td style="vertical-align:top; width:381px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;">Click <span style="font-weight: bold;">New Connection</span>.</p>
+</td>
+<td style="vertical-align:top; width:654px; padding:2px; border:solid thin #000000;"><div class="p_Normal" style="text-align: center; page-break-inside: avoid;"><div style="margin:0 auto 0 auto;width:99%;max-width:457px;height:auto;"><img alt="clip0079" style="width:100%;height:auto;border:none" src="clip0079.png"/></div></div>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:69px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;">18</p>
+</td>
+<td style="vertical-align:top; width:381px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;">Scroll down and select <span style="font-weight: bold;">CCH iFirm </span>by clicking the <span style="font-weight: bold;">+ </span>to the right.</p>
+</td>
+<td style="vertical-align:top; width:654px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="text-align: center; page-break-inside: avoid;"><span class="f_ImageCaption"> <div style="margin:0 auto 0 auto;width:99%;max-width:1874px;height:auto;"><img alt="clip0080" style="width:100%;height:auto;border:none" src="clip0080.png"/></div></span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:69px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;">19</p>
+</td>
+<td style="vertical-align:top; width:381px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;">Click <span style="font-weight: bold;">Create</span>.</p>
+</td>
+<td style="vertical-align:top; width:654px; padding:2px; border:solid thin #000000;"><div class="p_Normal" style="text-align: center; page-break-inside: avoid;"><div style="margin:0 auto 0 auto;width:99%;max-width:625px;height:auto;"><img alt="clip0081" style="width:100%;height:auto;border:none" src="clip0081.png"/></div></div>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:69px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;">20</p>
+</td>
+<td style="vertical-align:top; width:381px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;">A CCH iFirm pop-up window will open.</p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;">Enter your CCH iFirm Username and Password and click <span style="font-weight: bold;">Login</span>.</p>
+</td>
+<td style="vertical-align:top; width:654px; padding:2px; border:solid thin #000000;"><div class="p_Normal" style="text-align: center; page-break-inside: avoid;"><div style="margin:0 auto 0 auto;width:99%;max-width:982px;height:auto;"><img alt="clip0082" style="width:100%;height:auto;border:none" src="clip0082.png"/></div></div>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:69px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;">21</p>
+</td>
+<td style="vertical-align:top; width:381px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;">Click <span style="font-weight: bold;">Yes</span> to allow access.</p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;">The pop-up window will then close automatically.</p>
+</td>
+<td style="vertical-align:top; width:654px; padding:2px; border:solid thin #000000;"><div class="p_Normal" style="text-align: center; page-break-inside: avoid;"><div style="margin:0 auto 0 auto;width:99%;max-width:988px;height:auto;"><img alt="clip0083" style="width:100%;height:auto;border:none" src="clip0083.png"/></div></div>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:69px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;">22</p>
+</td>
+<td style="vertical-align:top; width:381px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;">Close the Browser tab showing connections.</p>
+</td>
+<td style="vertical-align:top; width:654px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="text-align: center; page-break-inside: avoid;">&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:69px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;">23</p>
+</td>
+<td style="vertical-align:top; width:381px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;">Select <span style="font-weight: bold;">CCH iFirm</span> and click <span style="font-weight: bold;">Save.</span></p>
+</td>
+<td style="vertical-align:top; width:654px; padding:2px; border:solid thin #000000;"><div class="p_Normal" style="text-align: center; page-break-inside: avoid;"><div style="margin:0 auto 0 auto;width:99%;max-width:477px;height:auto;"><img alt="clip0084" style="width:100%;height:auto;border:none" src="clip0084.png"/></div></div>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:69px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;">24</p>
+</td>
+<td style="vertical-align:top; width:381px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;">Once your screen looks like the example shown to the right, click <span style="font-weight: bold;">Import</span>.</p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;">This may take a minute, <span style="text-decoration: underline;">do not</span> navigate away from the screen or refresh.</p>
+</td>
+<td style="vertical-align:top; width:654px; padding:2px; border:solid thin #000000;"><div class="p_Normal" style="text-align: center; page-break-inside: avoid;"><div style="margin:0 auto 0 auto;width:99%;max-width:1209px;height:auto;"><img alt="clip0085" style="width:100%;height:auto;border:none" src="clip0085.png"/></div></div>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:69px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;">25</p>
+</td>
+<td style="vertical-align:top; width:381px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;">When the package has been successfully imported, you will see a notification at the top of the page. Click <span style="font-weight: bold;">Open Flow.</span></p>
+</td>
+<td style="vertical-align:top; width:654px; padding:2px; border:solid thin #000000;"><div class="p_Normal" style="text-align: center; page-break-inside: avoid;"><div style="margin:0 auto 0 auto;width:99%;max-width:1261px;height:auto;"><img alt="clip0086" style="width:100%;height:auto;border:none" src="clip0086.png"/></div></div>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:69px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;">26</p>
+</td>
+<td style="vertical-align:top; width:381px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;">Scroll down to <span style="font-weight: bold;">GetSPClient </span>and expand it by clicking on the title.</p>
+</td>
+<td style="vertical-align:top; width:654px; padding:2px; border:solid thin #000000;"><div class="p_Normal" style="text-align: center; page-break-inside: avoid;"><div style="margin:0 auto 0 auto;width:99%;max-width:692px;height:auto;"><img alt="clip0087" style="width:100%;height:auto;border:none" src="clip0087.png"/></div></div>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:69px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;">27</p>
+</td>
+<td style="vertical-align:top; width:381px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;">Change the <span style="font-weight: bold;">SiteAddress</span> to the address of your Document Center.</p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;">Then change the list name to <span style="font-weight: bold;">Clients</span>.</p>
+</td>
+<td style="vertical-align:top; width:654px; padding:2px; border:solid thin #000000;"><div class="p_Normal" style="text-align: center; page-break-inside: avoid;"><div style="margin:0 auto 0 auto;width:99%;max-width:633px;height:auto;"><img alt="clip0088" style="width:100%;height:auto;border:none" src="clip0088.png"/></div></div>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:69px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;">28</p>
+</td>
+<td style="vertical-align:top; width:381px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;">Scroll down to the <span style="font-weight: bold;">If Yes</span> box below.</p>
+</td>
+<td style="vertical-align:top; width:654px; padding:2px; border:solid thin #000000;"><div class="p_Normal" style="text-align: center; page-break-inside: avoid;"><div style="margin:0 auto 0 auto;width:99%;max-width:650px;height:auto;"><img alt="clip0089" style="width:100%;height:auto;border:none" src="clip0089.png"/></div></div>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:69px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;">29</p>
+</td>
+<td style="vertical-align:top; width:381px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;">Expand <span style="font-weight: bold;">Apply to each</span> by clicking on the title.</p>
+</td>
+<td style="vertical-align:top; width:654px; padding:2px; border:solid thin #000000;"><div class="p_Normal" style="text-align: center; page-break-inside: avoid;"><div style="margin:0 auto 0 auto;width:99%;max-width:655px;height:auto;"><img alt="clip0090" style="width:100%;height:auto;border:none" src="clip0090.png"/></div></div>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:69px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;">30</p>
+</td>
+<td style="vertical-align:top; width:381px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;">Expand <span style="font-weight: bold;">Update Item</span> and change the <span style="font-weight: bold;">Site Address</span> to your Document Center URL.</p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;">Then change the<span style="font-weight: bold;"> List Name</span> to <span style="font-weight: bold;">Clients</span>.</p>
+</td>
+<td style="vertical-align:top; width:654px; padding:2px; border:solid thin #000000;"><div class="p_Normal" style="text-align: center; page-break-inside: avoid;"><div style="margin:0 auto 0 auto;width:99%;max-width:650px;height:auto;"><img alt="clip0091" style="width:100%;height:auto;border:none" src="clip0091.png"/></div></div>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:69px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;">31</p>
+</td>
+<td style="vertical-align:top; width:381px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;">Scroll down to <span style="font-weight: bold;">Loop thru addresses and update SP item</span>.</p>
+</td>
+<td style="vertical-align:top; width:654px; padding:2px; border:solid thin #000000;"><div class="p_Normal" style="text-align: center; page-break-inside: avoid;"><div style="margin:0 auto 0 auto;width:99%;max-width:633px;height:auto;"><img alt="clip0092" style="width:100%;height:auto;border:none" src="clip0092.png"/></div></div>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:69px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;">32</p>
+</td>
+<td style="vertical-align:top; width:381px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;">Expand <span style="font-weight: bold;">Loop thru addresses and update SP item</span>.</p>
+</td>
+<td style="vertical-align:top; width:654px; padding:2px; border:solid thin #000000;"><div class="p_Normal" style="text-align: center; page-break-inside: avoid;"><div style="margin:0 auto 0 auto;width:99%;max-width:654px;height:auto;"><img alt="clip0093" style="width:100%;height:auto;border:none" src="clip0093.png"/></div></div>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:69px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;">33</p>
+</td>
+<td style="vertical-align:top; width:381px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;">Expand <span style="font-weight: bold;">Switch Address Type</span>.</p>
+</td>
+<td style="vertical-align:top; width:654px; padding:2px; border:solid thin #000000;"><div class="p_Normal" style="text-align: center; page-break-inside: avoid;"><div style="margin:0 auto 0 auto;width:99%;max-width:1846px;height:auto;"><img alt="clip0094" style="width:100%;height:auto;border:none" src="clip0094.png"/></div></div>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:69px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;">34</p>
+</td>
+<td style="vertical-align:top; width:381px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;">Expand<span style="font-weight: bold;"> Case Postal Address.</span></p>
+</td>
+<td style="vertical-align:top; width:654px; padding:2px; border:solid thin #000000;"><div class="p_Normal" style="text-align: center; page-break-inside: avoid;"><div style="margin:0 auto 0 auto;width:99%;max-width:654px;height:auto;"><img alt="clip0095" style="width:100%;height:auto;border:none" src="clip0095.png"/></div></div>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:69px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;">35</p>
+</td>
+<td style="vertical-align:top; width:381px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;">Expand <span style="font-weight: bold;">Update item Postal Address</span> and change the site address to your Document Center URL.</p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;">Then change the <span style="font-weight: bold;">List Name</span> to <span style="font-weight: bold;">Clients</span>.</p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;">Close the section by clicking on the <span style="font-weight: bold;">Update item Postal Address </span>title.</p>
+</td>
+<td style="vertical-align:top; width:654px; padding:2px; border:solid thin #000000;"><div class="p_Normal" style="text-align: center; page-break-inside: avoid;"><div style="margin:0 auto 0 auto;width:99%;max-width:605px;height:auto;"><img alt="clip0096" style="width:100%;height:auto;border:none" src="clip0096.png"/></div></div>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:69px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;">36</p>
+</td>
+<td style="vertical-align:top; width:381px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;">Expand <span style="font-weight: bold;">Case Physical Address</span>, then expand <span style="font-weight: bold;">Update item Physical Address</span>.</p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;">Change the site address to your Document Center URL.</p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;">Then change the <span style="font-weight: bold;">List Name</span> to <span style="font-weight: bold;">Clients</span>.</p>
+</td>
+<td style="vertical-align:top; width:654px; padding:2px; border:solid thin #000000;"><div class="p_Normal" style="text-align: center; page-break-inside: avoid;"><div style="margin:0 auto 0 auto;width:99%;max-width:681px;height:auto;"><img alt="clip0097" style="width:100%;height:auto;border:none" src="clip0097.png"/></div></div>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:69px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;">37</p>
+</td>
+<td style="vertical-align:top; width:381px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;">Scroll back up and across to the right to <span style="font-weight: bold;">If no</span> and expand <span style="font-weight: bold;">Create Item in Clients List</span>. </p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;">Change the site address to your Document Center URL.</p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;">Then change the <span style="font-weight: bold;">List Name</span> to <span style="font-weight: bold;">Clients</span>.</p>
+</td>
+<td style="vertical-align:top; width:654px; padding:2px; border:solid thin #000000;"><div class="p_Normal" style="text-align: center; page-break-inside: avoid;"><div style="margin:0 auto 0 auto;width:99%;max-width:650px;height:auto;"><img alt="clip0098" style="width:100%;height:auto;border:none" src="clip0098.png"/></div></div>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:69px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;">38</p>
+</td>
+<td style="vertical-align:top; width:381px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;">Scroll down and expand <span style="font-weight: bold;">Loop thru addresses and add</span>.</p>
+</td>
+<td style="vertical-align:top; width:654px; padding:2px; border:solid thin #000000;"><div class="p_Normal" style="text-align: center; page-break-inside: avoid;"><div style="margin:0 auto 0 auto;width:99%;max-width:740px;height:auto;"><img alt="clip0099" style="width:100%;height:auto;border:none" src="clip0099.png"/></div></div>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:69px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;">39</p>
+</td>
+<td style="vertical-align:top; width:381px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;">Expand <span style="font-weight: bold;">Switch type of address</span>.</p>
+</td>
+<td style="vertical-align:top; width:654px; padding:2px; border:solid thin #000000;"><div class="p_Normal" style="text-align: center; page-break-inside: avoid;"><div style="margin:0 auto 0 auto;width:99%;max-width:1636px;height:auto;"><img alt="clip0100" style="width:100%;height:auto;border:none" src="clip0100.png"/></div></div>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:69px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;">40</p>
+</td>
+<td style="vertical-align:top; width:381px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;">Expand <span style="font-weight: bold;">Case Postal Address</span> and expand <span style="font-weight: bold;">Update SP item Postal Address</span>. </p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;">Change the site address to your Document Center URL.</p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;">Then change the <span style="font-weight: bold;">List Name</span> to <span style="font-weight: bold;">Clients</span>.</p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;">Close the section by clicking on the <span style="font-weight: bold;">Case Postal Address</span> title.</p>
+</td>
+<td style="vertical-align:top; width:654px; padding:2px; border:solid thin #000000;"><div class="p_Normal" style="text-align: center; page-break-inside: avoid;"><div style="margin:0 auto 0 auto;width:99%;max-width:638px;height:auto;"><img alt="clip0101" style="width:100%;height:auto;border:none" src="clip0101.png"/></div></div>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:69px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;">41</p>
+</td>
+<td style="vertical-align:top; width:381px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;">Expand <span style="font-weight: bold;">Case Physical Address</span> and expand <span style="font-weight: bold;">Update SP item Physical Address</span>.</p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;">Change the site address to your Document Center URL.</p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;">Then change the <span style="font-weight: bold;">List Name</span> to <span style="font-weight: bold;">Clients</span>.</p>
+</td>
+<td style="vertical-align:top; width:654px; padding:2px; border:solid thin #000000;"><div class="p_Normal" style="text-align: center; page-break-inside: avoid;"><div style="margin:0 auto 0 auto;width:99%;max-width:641px;height:auto;"><img alt="clip0102" style="width:100%;height:auto;border:none" src="clip0102.png"/></div></div>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:69px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;">42</p>
+</td>
+<td style="vertical-align:top; width:381px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;">Scroll to the top and expand <span style="font-weight: bold;">When a HTTP request is received</span>.</p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;">Copy the <span style="font-weight: bold;">HTTP POST URL</span> - you will need this when you come to implement Flow #2. </p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:654px; padding:2px; border:solid thin #000000;"><div class="p_Normal" style="text-align: center; page-break-inside: avoid;"><div style="margin:0 auto 0 auto;width:99%;max-width:615px;height:auto;"><img alt="clip0103" style="width:100%;height:auto;border:none" src="clip0103.png"/></div></div>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:69px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;">43</p>
+</td>
+<td style="vertical-align:top; width:381px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;">Click <span style="font-weight: bold;">Update Flow</span>.</p>
+</td>
+<td style="vertical-align:top; width:654px; padding:2px; border:solid thin #000000;"><div class="p_Normal" style="text-align: center; page-break-inside: avoid;"><div style="margin:0 auto 0 auto;width:99%;max-width:990px;height:auto;"><img alt="clip0104" style="width:100%;height:auto;border:none" src="clip0104.png"/></div></div>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:69px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;">44</p>
+</td>
+<td style="vertical-align:top; width:381px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;">Click <span style="font-weight: bold;">Done</span>.</p>
+</td>
+<td style="vertical-align:top; width:654px; padding:2px; border:solid thin #000000;"><div class="p_Normal" style="text-align: center; page-break-inside: avoid;"><div style="margin:0 auto 0 auto;width:99%;max-width:1088px;height:auto;"><img alt="clip0105" style="width:100%;height:auto;border:none" src="clip0105.png"/></div></div>
+</td>
+</tr>
+<tr>
+<td colspan="3"  style="vertical-align:top; width:1015px; padding:2px; border:solid thin #000000;"><p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;">*** PROCEDURE COMPLETE ***</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+<p class="p_Normal" style="page-break-inside: avoid;">&nbsp;</p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+
+
+  $(document).ready(function(){
+    $(window).bind('resize', function() {
+      var y = $('#idheader').height(); 
+      $('#idcontent').css('margin-top', y);
+      var par = window.parent;
+      if ($( par ).width() <= $( window ).width()+20) {
+        $('#idheader').css('position', 'relative');
+        $('#idcontent').css('margin-top', 0);
+        $('#idbacktotop').css('display', 'block');
+        $('.hmanchor').css('margin-top', -20);
+	$('.hmanchor').css('padding-top', 20);
+      }
+      else {
+        $('#idheader').css('position', 'fixed');
+        $('#idcontent').css('margin-top', $('#idheader').height());
+        $('#idbacktotop').css('display', 'none');
+        $('.hmanchor').css('margin-top', -y-20);
+	$('.hmanchor').css('padding-top', y+20);
+      }
+    });
+    
+    $(window).resize(); //trigger event for initially small displays
+  });
+
+if ((!parent.hmNavigationFrame) && (parent.location) && (parent.location.href)) { $('.sync-toc').show();$('p.crumbs').hide();}
+
+</script>
+</body>
+</html>

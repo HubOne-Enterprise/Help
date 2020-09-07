@@ -12,3 +12,9 @@ function hmGetContextId(query) {
     else return "";
 }
 
+hmContextIds["100"]="adding-a-column-to-the-documen.html";
+hmContextIds["100"]="adding-a-column-to-the-documen.html";
+hmContextIds["100"]="adding-a-column-to-the-documen.html";
+hmContextIds["100"]="adding-a-column-to-the-documen.html";
+hmContextIds["100"]="adding-a-column-to-the-documen.html";
+hmContextIds["100"]="adding-a-column-to-the-documen.html";
