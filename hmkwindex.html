@@ -1,0 +1,204 @@
+﻿<!DOCTYPE html>
+<html><head>
+   <title>OnePractice App Guides</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />   
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="robots" content="noindex,follow" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+ 
+   <!-- This line includes the general project style sheet (not required) -->
+   <link type="text/css" href="default.css" rel="stylesheet" />
+
+   <style type="text/css">
+       body { background:#FFF; }
+       #idx          { margin: 0; padding: 0 }     /* div tag that wraps the keyword index */
+       #idx a        { color: #000; text-decoration: none }  /* all links in index appear as text */
+
+       #idx p             { margin: 2px }        /* keywords and secondary keywords */
+	   #idx p.hilite { background-color: #adadad; padding-left: 5px; padding-bottom: 1px;}
+	   #idx p.hilite span {color: white; font-weight: bold;}
+       #idx p.idxkeyword2 { margin-left: 20px }  /* indentation for secondary keywords */
+
+       table.idxtable { background: #F4F4F4;
+                        border: thin solid #000000;
+                        border-collapse: collapse;
+                        -moz-box-shadow: 2px 2px 2px #B0B0B0;
+                        -webkit-box-shadow: 2px 2px 2px #B0B0B0;
+                        box-shadow: 2px 2px 2px #B0B0B0;
+                        filter: progid:DXImageTransform.Microsoft.Shadow(color=B0B0B0, Direction=135, Strength=4); }
+       td.idxtable    { background: #F4F4F4 }
+
+       /* font definitions for keyword section, keywords and popup links */
+       .idxsection  { font-weight: bold; font-size: 1.5em; color: #555; text-decoration: none; margin-top: 1em; margin-bottom: 1em; }
+       .idxkeyword  { font-weight: normal; font-size: 1.1em; color: #000000; text-decoration: none; }
+       .idxkeyword2 { font-weight: normal; font-size: 1.1em; color: #000000; text-decoration: none; }
+       .idxlink     { font-weight: normal; font-size: 1.1em; color: #000000; text-decoration: none; }
+
+   </style>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="helpman_settings.js"></script>  
+<script type="text/javascript">
+ $(document).ready(function(){
+ var parentScope = (parent.hmNavigationFrame);
+ if (parentScope) parent.currentNav("index");
+	$("a[target='hmcontent']").on("click",function(event){
+		$("p.hilite").removeClass("hilite");
+		$(this).parent("p").addClass("hilite");
+		if (parentScope)
+			window.parent.showNav("toggle");
+		});
+});
+</script>
+   <script type="text/javascript" src="hmcontextids.js"></script>
+</head>
+<body>
+  <!-- Place holder for the keyword index - this variable is REQUIRED! -->
+  <script type="text/javascript">
+
+  function hmInitHideLinks(cssCode) {
+  	var styleElement = document.createElement("style");
+  	styleElement.type = "text/css";
+  	if (styleElement.styleSheet) {
+    	styleElement.styleSheet.cssText = cssCode;
+  	}
+  	else {
+    	styleElement.appendChild(document.createTextNode(cssCode));
+  	}
+  	document.getElementsByTagName("head")[0].appendChild(styleElement);
+  }
+
+  hmInitHideLinks("#idx div { display: none }");
+
+  var currentdiv = null;
+  var canhidelinks = true;
+
+  function hmshowLinks(divID) {
+    var thisdiv = document.getElementById(divID);
+    canhidelinks = true;
+    hmhideLinks();
+    if (thisdiv) {
+      currentdiv = thisdiv;
+      $(currentdiv).show();
+      $(currentdiv).mouseover(hmdivMouseOver).mouseout(hmdivMouseOut);
+      $(document).mouseup(hmhideLinks);
+    }
+  }
+  function hmdivMouseOver() { canhidelinks = false; };
+  function hmdivMouseOut() { canhidelinks = true; };
+  function hmhideLinks() {
+    if (canhidelinks) {
+      if (currentdiv) {
+        $(currentdiv).hide();
+        $(currentdiv).unbind("onmouseover", "onmouseout");
+      }
+      currentdiv = null;
+      $(document).unbind("onmouseup");
+    }
+  }
+function getText(obj) {
+  return (obj.innerText ? obj.innerText : obj.textContent);
+}
+function trackidx(obj) {
+  var akeyword = "";
+  while (obj.className != "idxkeyword") {
+    if (obj.previousSibling == null)
+      { obj = obj.parentNode; }
+    else
+      { obj = obj.previousSibling; }
+    if (obj.className == "idxkeyword2") { akeyword = getText(obj); }
+    if (obj.className == "idxkeyword") { akeyword = ((akeyword=="") ? getText(obj) : getText(obj) + ":" + akeyword); }
+  }
+  if (parent.frames.length>0) {
+    if (parent.gaaccount) { parent.track("index", akeyword); }
+  }
+}
+
+</script>
+<div id="idx" style="margin:0;padding:0;border:none">
+<a name="A" id="A"></a><p class="idxsection">- A -</p>
+<p class="idxkeyword"><a href="using-template-field-builder.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Alternative Field</span></a></p>
+<p class="idxkeyword"><a href="field-tags.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Alternative options</span></a></p>
+<p class="idxkeyword"><a href="verifying-a-template.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Anomalies</span></a></p>
+<a name="C" id="C"></a><p class="idxsection">- C -</p>
+<p class="idxkeyword"><a href="themes.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Change the Look</span></a></p>
+<p class="idxkeyword"><a href="using-template-field-builder.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Clipboard button</span></a></p>
+<p class="idxkeyword"><a href="creating-a-template.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Copy and paste</span></a></p>
+<a name="D" id="D"></a><p class="idxsection">- D -</p>
+<p class="idxkeyword"><a href="creating-documents-merging-tem.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Download file</span></a></p>
+<p class="idxkeyword"><a href="creating-documents-merging-tem.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Downloads icon</span></a></p>
+<p class="idxkeyword"><a href="drag-and-drop.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Drag &amp; Drop</span></a></p>
+<a name="E" id="E"></a><p class="idxsection">- E -</p>
+<p class="idxkeyword"><a href="verifying-a-template.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Errors</span></a></p>
+<p class="idxkeyword"><a href="onepractice-templates.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Excel</span></a></p>
+<a name="F" id="F"></a><p class="idxsection">- F -</p>
+<p class="idxkeyword"><a href="using-template-field-builder.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Field Builder</span></a></p>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k13')"><span class="idxkeyword">Fields</span></a></p>
+<div id="k13" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="template-field-builder.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Template Field Builder</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="field-tags.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Field Builder Options</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword2"><a href="field-tags.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword2">Basic</span></a></p>
+<p class="idxkeyword2"><a href="field-tags.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword2">Choice</span></a></p>
+<p class="idxkeyword2"><a href="field-tags.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword2">Complex</span></a></p>
+<p class="idxkeyword2"><a href="field-tags.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword2">Custom</span></a></p>
+<p class="idxkeyword2"><a href="field-tags.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword2">Date</span></a></p>
+<p class="idxkeyword2"><a href="field-tags.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword2">Examples</span></a></p>
+<p class="idxkeyword2"><a href="field-tags.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword2">Multi-Line Text</span></a></p>
+<p class="idxkeyword2"><a href="field-tags.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword2">Number</span></a></p>
+<p class="idxkeyword2"><a href="field-tags.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword2">Number Range</span></a></p>
+<p class="idxkeyword2"><a href="field-tags.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword2">Standard</span></a></p>
+<p class="idxkeyword2"><a href="field-tags.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword2">Text</span></a></p>
+<p class="idxkeyword2"><a href="field-tags.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword2">Yes or No</span></a></p>
+<p class="idxkeyword"><a href="creating-documents-merging-tem.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">File to client folder checkbox</span></a></p>
+<a name="H" id="H"></a><p class="idxsection">- H -</p>
+<p class="idxkeyword"><a href="help.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Help</span></a></p>
+<a name="L" id="L"></a><p class="idxsection">- L -</p>
+<p class="idxkeyword"><span class="idxkeyword">lists</span></p>
+<p class="idxkeyword2"><a href="getting-started.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword2">clients</span></a></p>
+<p class="idxkeyword2"><a href="getting-started.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword2">jobs</span></a></p>
+<a name="M" id="M"></a><p class="idxsection">- M -</p>
+<p class="idxkeyword"><a href="creating-documents-merging-tem.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Metadata</span></a></p>
+<p class="idxkeyword2"><a href="metadata-and-templates.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword2">Add</span></a></p>
+<p class="idxkeyword2"><a href="metadata-and-templates.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword2">Columns</span></a></p>
+<p class="idxkeyword2"><a href="metadata-and-templates.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword2">Custom</span></a></p>
+<p class="idxkeyword"><a href="creating-documents-merging-tem.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Metadata checkbox</span></a></p>
+<p class="idxkeyword"><span class="idxkeyword">multiple</span></p>
+<p class="idxkeyword2"><a href="creating-documents-merging-tem.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword2">Clients</span></a></p>
+<p class="idxkeyword2"><a href="creating-documents-merging-tem.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword2">Jobs</span></a></p>
+<a name="N" id="N"></a><p class="idxsection">- N -</p>
+<p class="idxkeyword"><a href="creating-documents-merging-tem.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Navigate to the folder</span></a></p>
+<a name="O" id="O"></a><p class="idxsection">- O -</p>
+<p class="idxkeyword"><span class="idxkeyword">OnePractice</span></p>
+<p class="idxkeyword2"><a href="themes.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword2">Change Theme</span></a></p>
+<p class="idxkeyword2"><a href="themes.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword2">Theme</span></a></p>
+<a name="P" id="P"></a><p class="idxsection">- P -</p>
+<p class="idxkeyword"><a href="field-tags.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">pipe characters</span></a></p>
+<p class="idxkeyword"><a href="creating-documents-merging-tem.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Popup blocker</span></a></p>
+<p class="idxkeyword"><span class="idxkeyword">Prompt</span></p>
+<p class="idxkeyword2"><a href="template-field-builder.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword2">Custom</span></a></p>
+<p class="idxkeyword2"><a href="template-field-builder.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword2">Standard</span></a></p>
+<a name="R" id="R"></a><p class="idxsection">- R -</p>
+<p class="idxkeyword"><a href="recently-saved-documents.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">recently saved</span></a></p>
+<p class="idxkeyword"><a href="refresh.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Refresh</span></a></p>
+<a name="S" id="S"></a><p class="idxsection">- S -</p>
+<p class="idxkeyword"><a href="settings.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">settings</span></a></p>
+<p class="idxkeyword"><span class="idxkeyword">SharePoint</span></p>
+<p class="idxkeyword2"><a href="onepractice-templates.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword2">Document Center</span></a></p>
+<p class="idxkeyword2"><a href="themes.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword2">Theme</span></a></p>
+<p class="idxkeyword"><a href="creating-documents-merging-tem.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">sub-folder</span></a></p>
+<a name="T" id="T"></a><p class="idxsection">- T -</p>
+<p class="idxkeyword"><span class="idxkeyword">Template</span></p>
+<p class="idxkeyword2"><a href="creating-a-template.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword2">Create</span></a></p>
+<p class="idxkeyword2"><a href="creating-a-template.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword2">Field Builder</span></a></p>
+<p class="idxkeyword"><a href="onepractice-templates.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Templates</span></a></p>
+<p class="idxkeyword"><a href="themes.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Theme</span></a></p>
+<p class="idxkeyword"><a href="themes.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Try it out</span></a></p>
+<a name="V" id="V"></a><p class="idxsection">- V -</p>
+<p class="idxkeyword"><a href="verifying-a-template.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Verify Template</span></a></p>
+<p class="idxkeyword"><a href="creating-documents-merging-tem.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">View Saved Document</span></a></p>
+<a name="W" id="W"></a><p class="idxsection">- W -</p>
+<p class="idxkeyword"><a href="onepractice-templates.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Word</span></a></p>
+<a name="Y" id="Y"></a><p class="idxsection">- Y -</p>
+<p class="idxkeyword"><a href="themes.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Yes, keep it</span></a></p>
+</div>
+
+</body>
+</html>
